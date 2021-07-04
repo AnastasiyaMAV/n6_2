@@ -1,0 +1,65 @@
+.header1 {
+    display: flex;
+    flex: 0 0 content;
+    /*не сжирают пространство и не ужимаются*/
+    background-color: rebeccapurple;
+    justify-content: center;
+}
+
+.footer1 {
+    display: flex;
+    flex: 1;
+    /*0 0 content; не сжирают пространство и не ужимаются*/
+    background-color: rebeccapurple;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main1 {
+    flex: 1;
+    /*сжирает пространство*/
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    /*растягивался на всю высоту*/
+}
+
+.body1 {
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+    /*размер подгонятеся по 100%*/
+}
+
+.aside1 {
+    /*боковая панель - 20% ширины*/
+    width: 20vh;
+    background-color: rgb(176, 117, 235);
+}
+
+.section1 {
+    display: flex;
+    flex: 1;
+    /*сжирает пространство*/
+    justify-content: space-around;
+    /*эл-ты равномерно расположены от начала до конца контейнера с отступами между др.др, а также от краев контейнера*/
+    background-color: rgb(145, 47, 243);
+    flex-wrap: wrap;
+    /*элементы переносятся на следующие строки, если не помещаются в одну*/
+    align-content: space-between;
+    /*первая и последняя строки прижаты к краям*/
+
+}
+
+.div1 {
+    flex: 0 0 50vh;
+    height: 10vh;
+    background-color: yellow;
+}
+
+.div2 {
+    flex: 0 0 150vh;
+    height: 25vh;
+    background-color: rgb(224, 224, 93);
+
+}
