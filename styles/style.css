@@ -1,65 +1,109 @@
-.header1 {
-    display: flex;
-    flex: 0 0 content;
-    /*не сжирают пространство и не ужимаются*/
-    background-color: rebeccapurple;
-    justify-content: center;
+.container {
+    display: grid;
+    width: 100%;
+    height: 600px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px 1fr 1fr 100px;
+    grid-template-areas: "header header header"
+        "content-2 content-3 content-3"
+        "content-1 content-1 content-1"
+        "footer footer footer";
+    gap: 1rem;
+    text-align: center;
+    background-color: #FFFFFF;
 }
 
-.footer1 {
-    display: flex;
-    flex: 1;
-    /*0 0 content; не сжирают пространство и не ужимаются*/
-    background-color: rebeccapurple;
-    justify-content: space-between;
-    align-items: center;
+.header {
+    display: grid;
+    grid-area: header;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: #E5E5E5;
+    gap: 1rem;
 }
 
-.main1 {
-    flex: 1;
-    /*сжирает пространство*/
-    display: flex;
-    flex-direction: row;
-    justify-content: stretch;
-    /*растягивался на всю высоту*/
+.content-1 {
+    grid-area: content-1;
 }
 
-.body1 {
-    display: flex;
-    flex-flow: column;
-    min-height: 100vh;
-    /*размер подгонятеся по 100%*/
+.content-2 {
+    grid-area: content-2;
 }
 
-.aside1 {
-    /*боковая панель - 20% ширины*/
-    width: 20vh;
-    background-color: rgb(176, 117, 235);
+.content-3 {
+    grid-area: content-3;
 }
 
-.section1 {
-    display: flex;
-    flex: 1;
-    /*сжирает пространство*/
-    justify-content: space-around;
-    /*эл-ты равномерно расположены от начала до конца контейнера с отступами между др.др, а также от краев контейнера*/
-    background-color: rgb(145, 47, 243);
-    flex-wrap: wrap;
-    /*элементы переносятся на следующие строки, если не помещаются в одну*/
-    align-content: space-between;
-    /*первая и последняя строки прижаты к краям*/
+.footer {
+    display: grid;
+    grid-area: footer;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #2B2B2B;
+    gap: 1rem;
+    ;
+}
+
+.footer-section-1 {
+    background-color: rgba(163, 105, 255, 0);
+    padding-top: 5px;
+}
+
+.footer-section-2 {
+    background-color: rgba(163, 105, 255, 0);
+    padding-top: 50px;
+}
+
+.footer-section-3 {
+    background-color: rgba(163, 105, 255, 0);
+    padding-top: 50px;
+}
+
+.footer-section-4 {
+    background-color: rgba(163, 105, 255, 0);
+    padding-top: 50px;
+}
+
+.header-section-1 {
+    padding-top: 10px;
+    padding-left: 10px;
 
 }
 
-.div1 {
-    flex: 0 0 50vh;
-    height: 10vh;
-    background-color: yellow;
+a:hover {
+    text-decoration: underline;
 }
 
-.div2 {
-    flex: 0 0 150vh;
-    height: 25vh;
-    background-color: rgb(224, 224, 93);
+a:link {
+    color: black;
+}
 
+a:visited {
+    color: black;
+}
+
+a:active {
+    color: #f00;
+}
+
+.buttonClass {
+    font-size: 15px;
+    font-family: Arial;
+    width: 140px;
+    height: 50px;
+    border-width: 1px;
+    color: #3a8a9e;
+    border-color: #d6bcd6;
+    font-weight: bold;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 3px 4px 0px 0px #899599;
+    text-shadow: 0px 1px 0px #e1e2ed;
+    background: linear-gradient(#ededed, #bab1ba);
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.buttonClass:hover {
+    background: linear-gradient(#bab1ba, #ededed);
 }
